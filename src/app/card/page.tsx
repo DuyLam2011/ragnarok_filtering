@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <main className="min-h-screen p-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8">Ragnarok Cards</h1>
+        <h1 className="text-3xl font-bold mb-8 text-black">Ragnarok Cards</h1>
         
         <DataFilter filter={filter} onFilterChange={setFilter} />
 
@@ -81,13 +81,15 @@ export default function Home() {
             <article key={item.item_id} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
-                  <Image
-                    src={item.icon}
-                    alt={item.name}
-                    width={64}
-                    height={64}
-                    className="rounded"
-                  />
+                  <div className="w-16 h-16 relative">
+                    <Image
+                      src={item.icon}
+                      alt={item.name}
+                      fill
+                      sizes="64px"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
                 <div className="flex-grow">
                   <h2 className="text-xl font-semibold mb-2 text-black">{item.name}</h2>
@@ -105,13 +107,15 @@ export default function Home() {
                   <div className="flex flex-wrap gap-2">
                     {item.mobs.map((mob) => (
                       <div key={mob.monster_id} className="flex items-center space-x-2">
-                        <Image
-                          src={mob.image}
-                          alt={mob.name}
-                          width={24}
-                          height={24}
-                          className="rounded"
-                        />
+                        <div className="w-6 h-6 relative">
+                          <Image
+                            src={mob.image}
+                            alt={mob.name}
+                            fill
+                            sizes="24px"
+                            className="object-contain rounded"
+                          />
+                        </div>
                         <span className="text-sm text-black">
                           {mob.name}
                         </span>

@@ -42,7 +42,7 @@ export default function DataFilter({ filter, onFilterChange }: DataFilterProps) 
         <input
           type="text"
           id="search"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          className="p-3 mt-1 block placeholder:text-gray-300 w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
           placeholder="Search by card name..."
           value={filter.searchTerm}
           onChange={handleSearchChange}
@@ -54,13 +54,13 @@ export default function DataFilter({ filter, onFilterChange }: DataFilterProps) 
         </label>
         <select
           id="location"
-          className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          className="p-3 mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
           value={filter.location || ''}
           onChange={handleLocationChange}
         >
-          <option value="" className='text-black'>All Locations</option>
+          <option value="" className='p-3 text-black'>All</option>
           {LOCATIONS.map((loc) => (
-            <option key={loc} value={loc} className='text-black'>
+            <option key={loc} value={loc} className='p-3 text-black'>
               {loc}
             </option>
           ))}
