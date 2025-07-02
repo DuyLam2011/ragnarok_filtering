@@ -54,11 +54,11 @@ export default function DataFilter({ filter, onFilterChange }: DataFilterProps) 
         </label>
         <select
           id="location"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
           value={filter.location || ''}
           onChange={handleLocationChange}
         >
-          <option value="">All Locations</option>
+          <option value="" className='text-black'>All Locations</option>
           {LOCATIONS.map((loc) => (
             <option key={loc} value={loc} className='text-black'>
               {loc}

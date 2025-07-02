@@ -101,7 +101,7 @@ export default function Home() {
               </div>
               {item.mobs && item.mobs.length > 0 && (
                 <div className="mt-4 pt-4 border-t">
-                  <h3 className="text-sm font-semibold mb-2">Dropped by:</h3>
+                  <h3 className="text-sm font-semibold mb-2 text-black">Dropped by:</h3>
                   <div className="flex flex-wrap gap-2">
                     {item.mobs.map((mob) => (
                       <div key={mob.monster_id} className="flex items-center space-x-2">
@@ -112,8 +112,8 @@ export default function Home() {
                           height={24}
                           className="rounded"
                         />
-                        <span className="text-sm">
-                          {mob.name} {mob.is_mvp ? '(MVP)' : ''}
+                        <span className="text-sm text-black">
+                          {mob.name}
                         </span>
                       </div>
                     ))}
