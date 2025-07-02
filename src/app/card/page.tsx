@@ -85,17 +85,12 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex-grow">
-                  <h2 className="text-xl font-semibold mb-2">{item.name}</h2>
+                  <h2 className="text-xl font-semibold mb-2 text-black">{item.name}</h2>
                   <p className="text-sm text-gray-600 mb-2">{item.description_history}</p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
                       {item.location}
                     </span>
-                    {item.weight > 0 && (
-                      <span className="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded">
-                        Weight: {item.weight}
-                      </span>
-                    )}
                   </div>
                 </div>
               </div>
