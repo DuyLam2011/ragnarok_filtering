@@ -23,7 +23,12 @@ export default function Home() {
     const fetchItems = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://api.roarkaik.asia/arkaik/database/items?language=en&filterType[]=%7B%22code%22:6,%22name%22:%22Card%22%7D');
+        const response = await fetch('/api/cards', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
         if (!response.ok) {
           throw new Error('Failed to fetch items');
         }
